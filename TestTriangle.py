@@ -17,7 +17,7 @@ from Triangle import classifyTriangle
 class TestTriangles(unittest.TestCase):
     # define multiple sets of tests as functions with names that begin
 
-    def testRightTriangle(self): 
+    def testRightTriangles(self): 
         self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
         self.assertEqual(classifyTriangle(12,5,13),'Right','12,5,13 is a Right triangle')
         self.assertEqual(classifyTriangle(17,15,8),'Right','17,15,8 is a Right triangle')
@@ -29,13 +29,13 @@ class TestTriangles(unittest.TestCase):
 
     def testIsoscelesTriangles(self): 
         self.assertEqual(classifyTriangle(2,2,3),'Isosceles','2,2,3 should be isosceles')
-        self.assertEqual(classifyTriangle(4,6,4),'Isoceles','4,6,4 should be isosceles')
-        self.assertEqual(classifyTriangle(30,30,10),'Equilateral','30,30,10 should be isosceles')
+        self.assertEqual(classifyTriangle(4,6,4),'Isosceles','4,6,4 should be isosceles')
+        self.assertEqual(classifyTriangle(30,30,10),'Isosceles','30,30,10 should be isosceles')
 
     def testScaleneTriangles(self): 
         self.assertEqual(classifyTriangle(3,4,6),'Scalene','3,4,6 should be scalene')
         self.assertEqual(classifyTriangle(4,8,6),'Scalene','4,8,6 should be scalene')
-        self.assertEqual(classifyTriangle(30,20,17),'Equilateral','30,20,17 should be scalene')
+        self.assertEqual(classifyTriangle(30,20,17),'Scalene','30,20,17 should be scalene')
 
     def testNotTriangles(self): 
         self.assertEqual(classifyTriangle(0,1,1),'InvalidInput','0,1,1 should yield invalid input')
